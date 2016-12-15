@@ -1,0 +1,30 @@
+<h1>Edit User</h1>
+
+<div>
+<form class="" action="/users/edit" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div>
+    <label>First Name</label>
+    <input type="text" name="user[first_name]" value="">
+  </div>
+
+  <div>
+    <label>Last Name</label>
+    <input type="text" name="user[last_name]" value="">
+  </div>
+
+  <div>
+    <label>Email</label>
+    <input type="text" name="user[email]" value="">
+  </div>
+
+  <div>
+    <input type="submit" name="" value="Update">
+  <div>
+
+    <div>
+        <td><%= button_to "Go Back", { :controller => "users", :action => "index"}, :method => :get %></td>
+    </div>
+
+</form>
+</div>

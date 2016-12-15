@@ -1,0 +1,26 @@
+<h1>Listing Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Email</td>
+    </tr>
+  </thead>
+
+  <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.email %></td>
+        <td><%= button_to "Edit", { :controller => "users", :action => "edit"}, :method => :post %></td>
+      </tr>
+      <% end %>
+      <tr>
+        <td><%= button_to "New User", { :controller => "users", :action => "new"}, :method => :get %></td>
+      </tr>
+
+  </tbody>
+</table>
